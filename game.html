@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TAO | Gallery</title>
+    <title>TAO | Number guessing game</title>
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -74,10 +74,10 @@ folder instead of downloading all of them to reduce the load. -->
                                 <li class="user-body">
                                     <div class="row">
                                         <div class="col-xs-4 text-center">
-                                            <a href="index.html">Dashboard</a>
+                                            <a href="#">Dashboard</a>
                                         </div>
                                         <div class="col-xs-4 text-center">
-                                            <a href="#">Gallery</a>
+                                            <a href="gallery.html">Gallery</a>
                                         </div>
                                         <div class="col-xs-4 text-center">
                                             <a href="contact.html">Contect</a>
@@ -121,7 +121,7 @@ folder instead of downloading all of them to reduce the load. -->
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="gallery.html">
                             <i class="fa fa-fw fa-camera-retro"></i>
                             <span>Gallery</span>
                         </a>
@@ -133,7 +133,7 @@ folder instead of downloading all of them to reduce the load. -->
                         </a>
                     </li>
                     <li>
-                        <a href="game.html">
+                        <a href="#">
                             <i class="fa fa-fw fa-play-circle-o"></i>
                             <span>Number guessing game</span>
                         </a>
@@ -151,62 +151,47 @@ folder instead of downloading all of them to reduce the load. -->
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Gallery
-                    <small>style</small>
+                    Number guessing game
+                    <small>play now</small>
                 </h1>
             </section>
 
             <!-- Main content -->
+
             <section class="content">
-
                 <!-- Default box -->
+                <div class="box-footer" align="center">
+                    <h5> We have selected a random number between 1 and 100. See if you can guess it in 10 turns
+                        or less. We'll tell you if your guess was too high , too low or correct.
+                    </h5>
+                </div>
+
+                <div class="box-footer" align="center">
+                    <label for="exampleInputEmail1">Your number</label>
+                    <input id="numInput" type="email" class="form-control" placeholder="Enter number">
+                    <br>
+                    <div align="left">
+                        <label id="prev" for="exampleInputEmail1">Previous gresses :</label>
+                    </div>
+                    <br>
+                    <button id="submitbt" type="submit" class="btn btn-primary">Submit</button>
+                </div>
                 <div class="box">
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer">
+                    <div id="noti" class="callout callout-info">
+                        <h4 id="htext">Let's go</h4>
+                        <p id="dtext">You can guess it in 10 turns.</p>
+                        <button id="newgamebt" type="submit" class="btn btn-primary">Start new game</button>
 
-                    <!-- Body_________________________________________________________________________________Body -->
-                    <h4 class="page-header">My picture</h4>
-                    <div class="row margin-bottom">
-                        <div class="col-sm-6">
-                            <img class="img-responsive" src="picture/programming.jpg" alt="Photo">
-                        </div>
-                        <div class="col-sm-6">
-                            <img class="img-responsive" src="picture/technology.jpg" alt="Photo">
-                        </div>
                     </div>
-                    <div class="row margin-bottom">
-                        <div class="col-sm-6">
-                            <img class="img-responsive" src="picture/sky_sea.jpg" alt="Photo">
-                        </div>
-                        <div class="col-sm-6">
-                            <img class="img-responsive" src="picture/galexy.jpg" alt="Photo">
-                        </div>
-                    </div>
-                    <div class="row margin-bottom">
-                        <div class="col-sm-6">
-                            <img class="img-responsive" src="picture/conan.jpg" alt="Photo">
-                        </div>
-                        <div class="col-sm-6">
-                            <img class="img-responsive" src="picture/onepiece.jpg" alt="Photo">
-                        </div>
-                    </div>
-                    <div class="row margin-bottom">
-                        <div class="col-sm-6">
-                            <img class="img-responsive" src="picture/footballTHteam.jpg" alt="Photo">
-                        </div>
-                        <div class="col-sm-6">
-                            <img class="img-responsive" src="picture/footballTH.jpg" alt="Photo">
-                        </div>
-                    </div>
-
                 </div>
-                <!-- /.box-footer-->
         </div>
-        <!-- /.box -->
-
         </section>
-        <!-- /.content -->
+        <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+
+    </section>
+    <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
 
@@ -236,6 +221,7 @@ folder instead of downloading all of them to reduce the load. -->
             $('.sidebar-menu').tree()
         })
     </script>
+    <script src="game.js"></script>
 
 </body>
 
